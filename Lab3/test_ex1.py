@@ -1,6 +1,11 @@
 import pytest
 from ex1 import Solution
 
+"""
+Outsource:
+- tests (Grok)
+"""
+
 def test_creation_valid():
     s = Solution("NaCl", 5.0, 15.0)
     assert s.name == "NaCl"
