@@ -107,6 +107,12 @@ class Solution:
         return (self.name == other.name) and (self.concentration == other.concentration)
 
 if __name__ == "__main__":
+    """
+    Demonstrate the Solution class functionality.
+    
+    Outsource:
+    - 121 - 124
+    """
     s1 = Solution("NaCl", 5.0, 20.0)
     s2 = Solution("NaCl", 1.0, 15.0)
     print(s1)
