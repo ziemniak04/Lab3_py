@@ -14,6 +14,9 @@ class Solution:
         Mix another Solution of the same `name` into this one (updates in-place).
     dilute(factor)
         Reduce concentration by `factor` (updates in-place).
+
+    Outsource:
+    - docstrings 
     """
 
     def __init__(self, name, concentration, volume):
@@ -29,6 +32,9 @@ class Solution:
 
         Raises: 
         - ValueError: If `concentration` or `volume` is not greater than 0.
+
+        Outsource:
+        - docstrings
         """
         if concentration <= 0:
             raise ValueError("Concentration must be greater than 0")
@@ -40,7 +46,7 @@ class Solution:
         self.volume = volume
 
     def __str__(self):
-        """Return a human-readable representation of the solution."""
+        """Return a representation of the solution."""
         return f"Solution: {self.name}, {self.concentration:.2f} mg/mL, {self.volume:.2f} mL"
 
     def add(self, other):
@@ -55,6 +61,10 @@ class Solution:
 
         Raises: 
         - ValueError: If `other.name` is different from `self.name`.
+
+        Outsource:
+        - docstrings
+        - lines: 72-79
         """
         if self.name != other.name:
             raise ValueError("Cannot mix different substances!")
@@ -78,6 +88,9 @@ class Solution:
 
         Raises: 
         - ValueError: If `factor` is not greater than 0.
+
+        Outsource:
+        - docstrings
         """
         if factor <= 0:
             raise ValueError("Dilution factor must be greater than 0")
@@ -87,6 +100,9 @@ class Solution:
         """Equality: same solute `name` and same `concentration`.
 
         Note: `volume` is intentionally ignored for equality checks.
+
+        Outsource:
+        - docstrings
         """
         return (self.name == other.name) and (self.concentration == other.concentration)
 
